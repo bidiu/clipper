@@ -3,7 +3,7 @@ Gem::Specification.new do |spec|
 	spec.version               = "0.0.2"
 	spec.date                  = "2017-03-01"
 	spec.summary               = "Diggo Clipper"
-	spec.description           = "A tool that can screenshot the whole web page preserving user-made Diggo annotatons"
+	spec.description           = "A tool that can clip the whole web page preserving user-made Diggo annotations"
 	spec.authors               = ["bedew"]
 	spec.email                 = "sunhe1007@126.com"
 
@@ -12,8 +12,8 @@ Gem::Specification.new do |spec|
 	spec.files.reject! do |filename|
 		filename.include? "config.rb"
 	end
-	spec.homepage		= "https://bidiu.github.io"
-	spec.license		= "MIT"
+	spec.homepage              = "https://bidiu.github.io"
+	spec.license               = "MIT"
 
   # TODO
 	spec.add_runtime_dependency "selenium-webdriver", ["= 3.0.5"]
