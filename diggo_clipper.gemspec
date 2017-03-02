@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
 	spec.name                  = "diggo_clipper"
-	spec.version               = "0.0.1"
+	spec.version               = "0.0.2"
 	spec.date                  = "2017-03-01"
 	spec.summary               = "Diggo Clipper"
 	spec.description           = "A tool that can screenshot the whole web page preserving user-made Diggo annotatons"
