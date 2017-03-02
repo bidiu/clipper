@@ -5,7 +5,7 @@ module DiggoClipper
     end
 
     def rand_sleep
-    	duration = rand * (DiggoClipper::SUSPEND_MAX - DiggoClipper::SUSPEND_MIN + 1) + DiggoClipper::SUSPEND_MIN
+    	duration = rand * (Config[:suspend_max] - Config[:suspend_min] + 1) + Config[:suspend_min]
     	sleep duration.to_i
     end
 
@@ -37,8 +37,8 @@ module DiggoClipper
     	end
     end
 
-    # return the async element, if failed, return nil
-    def async_element(selector_type, selector, times: 1, timeout: TIMEOUT, abort_on_timeout: true)
+    # return the async element, return nil if failed
+    def async_element(selector_type, selector, times: 1, timeout: Config[:timeout], abort_on_timeout: true)
     	loaded = wait_async_request(times, timeout, abort_on_timeout) do
     		@driver.find_elements(selector_type, selector).size > 0
     	end

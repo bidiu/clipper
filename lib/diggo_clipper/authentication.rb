@@ -13,8 +13,8 @@ module DiggoClipper
       @driver.navigate.to LOGIN_URL
       rand_sleep
       inputs = @driver.find_elements(:css, ".loginArea .input input")
-      inputs[0].send_keys EMAIL
-      inputs[1].send_keys PASSWORD
+      inputs[0].send_keys Config[:email]
+      inputs[1].send_keys Config[:password]
       @driver.find_element(:css, ".submitArea button").click
       close_popups
       disable_autoload

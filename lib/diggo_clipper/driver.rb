@@ -8,7 +8,7 @@ module DiggoClipper
           extensions: [ Base64.strict_encode64(File.open(@vendor_path, "rb").read) ]
         }
       }
-      Selenium::WebDriver.for BROWSER,
+      Selenium::WebDriver.for Config[:browser],
               desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(opt)
     end
   end

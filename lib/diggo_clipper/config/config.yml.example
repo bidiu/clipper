@@ -1,0 +1,15 @@
+# only support chrome currently
+browser: chrome
+
+# email or user name
+email: diggo_email_or_user_name
+password: diggo_password
+
+# imitate human, in second unit
+suspend_min: 1
+# imitate human, in second unit
+suspend_max: 2
+# in second unit
+timeout: 5
+# maximal times of try for single page
+max-try: 1
