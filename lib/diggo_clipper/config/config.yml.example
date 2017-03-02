@@ -1,15 +1,47 @@
-# only support chrome currently
-browser: chrome
+#
+# only support chrome Diggo extension currently
+#
 
-# email or user name
+# browser: chrome
+
+
+#
+# Diggo authentication info
+#
+
 email: diggo_email_or_user_name
 password: diggo_password
 
-# imitate human, in second unit
-suspend_min: 1
-# imitate human, in second unit
-suspend_max: 2
+
+#
 # in second unit
-timeout: 5
-# maximal times of try for single page
-max-try: 1
+#
+# >>> uncomment below if necessary
+
+# timeout: 5
+
+
+#
+# maximal times of try for single request
+#
+# >>> uncomment below if necessary
+
+#max-try: 1
+
+
+#
+# imitate human operation, in second unit
+#
+# >>> uncomment below if necessary
+
+# suspend_min: 1
+# suspend_max: 2
+
+
+#
+# pages to clip
+#
+
+pages_to_clip:
+  - http://www.example.com/path/to/the/page1
+  - http://www.example.com/path/to/the/page1

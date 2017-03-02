@@ -3,7 +3,7 @@ Gem::Specification.new do |spec|
 	spec.version               = "0.0.2"
 	spec.date                  = "2017-03-01"
 	spec.summary               = "Diggo Clipper"
-	spec.description           = "A tool that can clip the whole web page preserving user-made Diggo annotations"
+	spec.description           = "A tool to clip the web page preserving Diggo annotations and upload it to OneNote"
 	spec.authors               = ["bedew"]
 	spec.email                 = "sunhe1007@126.com"
 

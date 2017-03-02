@@ -1,0 +1,11 @@
+# only support chrome currently
+browser: chrome
+
+# imitate human, in second unit
+suspend_min: 1
+# imitate human, in second unit
+suspend_max: 2
+# in second unit
+timeout: 5
+# maximal times of try for single page
+max_try: 1

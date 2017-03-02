@@ -1,6 +1,6 @@
 module DiggoClipper
   class Config
-    CONFIG_PATH = File.join(GEM_LIB_DIR, GEM_NAME, "config", "config.yml")
+    CONFIG_DIR = File.join(GEM_LIB_DIR, GEM_NAME, "config")
 
     def self.[](key)
       key = key.to_s if key.is_a? Symbol
@@ -35,7 +35,9 @@ module DiggoClipper
 
     private_class_method :new, :validate, :process
 
-    @config = YAML.load(File.read(CONFIG_PATH))
+    config = YAML.load(File.read(File.join(CONFIG_DIR, "config.yml")))
+    default = YAML.load(File.read(File.join(CONFIG_DIR, "default.yml")))
+    @config = default.merge config
     validate
     process
   end
