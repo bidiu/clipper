@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   # TODO
 	spec.files                 = Dir["lib/**/*.rb"] + Dir["lib/**/.gitkeep"] + Dir["bin/*"]
 	spec.files.reject! do |filename|
-		filename.include? "config.rb"
+		filename.include? "config.yml"
 	end
 	spec.homepage              = "https://bidiu.github.io"
 	spec.license               = "MIT"
@@ -20,6 +20,5 @@ Gem::Specification.new do |spec|
 	spec.add_runtime_dependency "json", ["= 1.8.3"]
 	spec.add_runtime_dependency "http", ["= 2.2.1"]
 
-  # TODO
-	spec.executables << "ebrary-dl" << "ebrary-cl"
+	spec.executables << "clipper"
 end
