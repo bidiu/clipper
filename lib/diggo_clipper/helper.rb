@@ -46,6 +46,14 @@ module DiggoClipper
     	@driver.find_element(selector_type, selector) if loaded
     end
 
+    # return the async element, return empty array if failed
+    def async_elements(selector_type, selector, times: 1, timeout: Config[:timeout], abort_on_timeout: true)
+      wait_async_request(times, timeout, abort_on_timeout) do
+    		@driver.find_elements(selector_type, selector).size > 0
+    	end
+      @driver.find_elements(selector_type, selector)
+    end
+
     def set_attribute(element, attr_name, attr_value)
       @driver.execute_script(
         "arguments[0].setAttribute(arguments[1], arguments[2])",

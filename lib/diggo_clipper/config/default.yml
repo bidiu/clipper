@@ -9,3 +9,10 @@ suspend_max: 2
 timeout: 5
 # maximal times of try for single page
 max_try: 1
+
+#
+# following is internal configuration
+#
+match_threshold: 0.6
+# in second
+wait_threshold: 5
