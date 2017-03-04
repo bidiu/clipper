@@ -4,9 +4,13 @@ module DiggoClipper
 
     def initialize(driver)
       @driver = driver
+      @onenote = OneNote.new(driver)
     end
 
     def start
+      @onenote.ensure_privileges
+      DiggoClipper::Authentication.new(@driver).login
+
       pages_to_clip = Config[:pages_to_clip]
 
       @driver.navigate.to pages_to_clip[0]
@@ -15,7 +19,7 @@ module DiggoClipper
       if selected_text = @driver.execute_script(Js['range_selection'])
         trigger_extension(selected_text)
       end
-      # TODO save to OneNote
+      @onenote.create_note(@driver.page_source)
     end
 
   private
@@ -26,6 +30,7 @@ module DiggoClipper
 
     def trigger_extension(selected_text)
       selected_text = selected_text.gsub(/\s+/, '')
+      sleep Config[:wait_threshold]
       async_element(:id, "diigolet-csm-highlight-wrapper").click
       # close premium popup, if any
       close_premium_popup

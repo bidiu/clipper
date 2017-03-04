@@ -1,16 +1,9 @@
 #
-# only support chrome Diggo extension currently
-#
-
-# browser: chrome
-
-
-#
 # Diggo authentication info
 #
 
-email: diggo_email_or_user_name
-password: diggo_password
+# email: diggo_email_or_user_name
+# password: diggo_password
 
 
 #

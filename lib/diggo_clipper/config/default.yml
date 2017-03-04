@@ -1,6 +1,3 @@
-# only support chrome currently
-browser: chrome
-
 # imitate human, in second unit
 suspend_min: 1
 # imitate human, in second unit
@@ -10,9 +7,30 @@ timeout: 5
 # maximal times of try for single page
 max_try: 1
 
+
 #
 # following is internal configuration
+# invisible to users
 #
 match_threshold: 0.6
-# in second
+# TODO in second
 wait_threshold: 5
+# TODO in second
+internal_timeout: 8
+
+# only support chrome currently
+browser: chrome
+# in bytes
+buf_size: 4096
+
+access_token_file: access.json
+refresh_token_file: refresh.json
+
+# OAuth related
+# URL get the authorization code
+auth_url: https://login.live.com/oauth20_authorize.srf?response_type=code&client_id=6e7ba8bc-16af-4019-abd7-a44832353f3c&redirect_uri=https://login.live.com/oauth20_desktop.srf&scope=Notes.Create
+
+token_url: https://login.live.com/oauth20_token.srf
+token_url_body: grant_type=authorization_code&client_id=6e7ba8bc-16af-4019-abd7-a44832353f3c&code=%s&redirect_uri=%s
+
+redirect_uri: https://login.live.com/oauth20_desktop.srf

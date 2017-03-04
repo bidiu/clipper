@@ -1,4 +1,5 @@
 module DiggoClipper
+  # authentication for only Diigo
   class Authentication
     include Helper
 
