@@ -28,7 +28,7 @@ refresh_token_file: refresh.json
 
 # OAuth related
 # URL get the authorization code
-auth_url: https://login.live.com/oauth20_authorize.srf?response_type=code&client_id=6e7ba8bc-16af-4019-abd7-a44832353f3c&redirect_uri=https://login.live.com/oauth20_desktop.srf&scope=Notes.Create
+auth_url: https://login.live.com/oauth20_authorize.srf?response_type=code&client_id=6e7ba8bc-16af-4019-abd7-a44832353f3c&redirect_uri=https://login.live.com/oauth20_desktop.srf&scope=office.onenote_create
 
 token_url: https://login.live.com/oauth20_token.srf
 token_url_body: grant_type=authorization_code&client_id=6e7ba8bc-16af-4019-abd7-a44832353f3c&code=%s&redirect_uri=%s

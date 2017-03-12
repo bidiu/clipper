@@ -1,9 +1,18 @@
 #
 # Diggo authentication info
 #
+# >>> uncomment below if necessary
 
-# email: diggo_email_or_user_name
-# password: diggo_password
+# email: Diggo email or username
+# password: Diggo password
+
+
+#
+# OneNote location
+#
+
+notebook: OneNote notebook name
+section: note section name
 
 
 #

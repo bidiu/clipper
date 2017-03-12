@@ -8,7 +8,7 @@ module DiggoClipper
     end
 
     def start
-      @onenote.ensure_privileges
+      @onenote.ensure_notebook
       DiggoClipper::Authentication.new(@driver).login
 
       pages_to_clip = Config[:pages_to_clip]
